@@ -62,6 +62,13 @@ header{
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI";
 }
 
+.logo1 {
+    width:100px;
+    height:70px;
+    display:inline-grid;
+    place-items:center;
+}
+
 nav a{
     color:var(--muted);
     text-decoration:none;
@@ -220,4 +227,113 @@ footer{
 
 .timeline-content ul li {
     margin-bottom: 6px;
+}
+
+/* --- Spread (ycw) effect --- */
+.hobby-gallery { display:flex; justify-content:center; margin-top:18px; }
+.spread-wrapper { display:flex; gap:18px; flex-wrap:wrap; justify-content:center; align-items:center; }
+
+/* The main tile */
+.spread {
+  position: relative;
+  width: 160px;      /* fallback size, overridden by data-w via JS */
+  height: 110px;     /* fallback size, overridden by data-h via JS */
+  margin: 0.15em;
+  perspective: 700px;
+  perspective-origin: center center;
+  /* transform-style: preserve-3d;
+  transform: rotateX(40deg);
+  transition: transform 0.4s ease, z-index 0s; */
+  cursor: pointer;
+  list-style: none;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+  overflow: visible; /* allow folded pieces to show */
+  background: transparent;
+  
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform:
+    rotateX(28deg)     /* tilt backward */
+    rotateY(-12deg)    /* tilt slightly left */
+    translateZ(30px);  /* small depth pop */
+  transition: transform 0.35s ease-out;
+}
+
+/* Hover lifts and opens */
+.spread:hover {
+  transform: translateZ(80px) rotateX(20deg);
+  z-index: 40;
+}
+
+/* Each plane (9 pieces) shows same bg image; background positioned differently */
+.spread li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.32s cubic-bezier(.2,.9,.2,1), filter 1s;
+  filter: grayscale(0.85);
+  border-radius: 0 !important;
+  background-image: var(--img);       /* set by JS */
+  background-size: 300% 300%;
+  background-repeat: no-repeat;
+  /* hide debug text if any */
+  text-indent: 999px;
+  overflow: hidden;
+}
+
+/* initial folded positions */
+.spread li:first-of-type  { transform: none; }
+.spread li:nth-of-type(2) { left:100%; transform-origin: left center; transform: rotateY(180deg); }
+.spread li:nth-of-type(3) { top:100%; transform-origin: center top; transform: rotateX(-180deg); }
+.spread li:nth-of-type(4) { left:-100%; transform-origin: right center; transform: rotateY(-180deg); }
+.spread li:nth-of-type(5) { top:-100%; transform-origin: center bottom; transform: rotateX(180deg); }
+.spread li:nth-of-type(6) { top:100%; left:100%; transform-origin:center top; transform: rotateX(-180deg); }
+.spread li:nth-of-type(7) { top:100%; left:-100%; transform-origin:right center; transform: rotateY(-180deg); }
+.spread li:nth-of-type(8) { top:-100%; left:-100%; transform-origin:center bottom; transform: rotateX(180deg); }
+.spread li:nth-of-type(9) { top:-100%; left:100%; transform-origin:left center; transform: rotateY(180deg); }
+
+/* small delays so folding looks organic */
+.spread li:nth-of-type(2),
+.spread li:nth-of-type(3),
+.spread li:nth-of-type(4),
+.spread li:nth-of-type(5) { transition-delay: 0.03s; }
+.spread li:nth-of-type(6),
+.spread li:nth-of-type(7),
+.spread li:nth-of-type(8),
+.spread li:nth-of-type(9) { transition-delay: 0s; }
+
+/* On hover, bring planes back flat to form the image */
+.spread:hover li:nth-of-type(2),
+.spread:hover li:nth-of-type(4),
+.spread:hover li:nth-of-type(7),
+.spread:hover li:nth-of-type(9) { transform: rotateY(0); transition-delay: 0s; }
+
+.spread:hover li:nth-of-type(3),
+.spread:hover li:nth-of-type(5),
+.spread:hover li:nth-of-type(6),
+.spread:hover li:nth-of-type(8) { transform: rotateX(0); transition-delay: 0.2s; }
+
+/* background-position per plane so pieces align to form the whole image */
+.spread li { /* default center */ background-position: center center; }
+.spread li:nth-of-type(2) { background-position: right center; }
+.spread li:nth-of-type(3) { background-position: center bottom; }
+.spread li:nth-of-type(4) { background-position: left center; }
+.spread li:nth-of-type(5) { background-position: center top; }
+.spread li:nth-of-type(6) { background-position: right bottom; }
+.spread li:nth-of-type(7) { background-position: left bottom; }
+.spread li:nth-of-type(8) { background-position: left top; }
+.spread li:nth-of-type(9) { background-position: right top; }
+
+/* visual polish */
+.spread:hover li { filter: grayscale(0); }
+.spread:focus { outline: none; transform: translateZ(80px) rotateX(20deg); }
+
+/* responsive sizes */
+@media (max-width:880px) {
+  .spread { width: 36vw; height: 24vw; } /* responsive fallback */
 }

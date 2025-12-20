@@ -95,6 +95,13 @@ nav a:hover{color:#fff}
     border:1px solid rgba(255,255,255,0.03);
 }
 
+.panel1{
+    background:linear-gradient(180deg, var(--glass), rgb(127 183 241 / 15%));
+    border-radius:12px;
+    padding:18px;
+    border:1px solid rgba(255,255,255,0.03);
+}
+
 .panel.skills-container {
     display: flex;
     flex-wrap: wrap;

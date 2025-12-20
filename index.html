@@ -181,15 +181,79 @@
                             <img src="media/logos/volvo_logo.svg" alt="volvo" style="height:24px;margin-right:8px;margin-block-end: 1%;">
                             <h3>Data Scientist</h3>
                             <span class="timeline-date">October 2023 – Present</span>
-                            <ul>
-                                <li>Supported Volvo’s MATLAB-to-Python modernization, reducing MATLAB usage by 30%.</li>
-                                <li>Built Apache Airflow ETL pipelines for Hydrogen Engine Rigs & Test Fleet data from S3 data lake.</li>
-                                <li>Developed Streamlit and Plotly Dash applications hosted on Kubernetes for 200+ users.</li>
-                                <li>Created a Django-based user management portal for DSL administrators.</li>
+                            <ul style="list-style-type: none; padding-left: 0em;">
+                                <li>
+                                    <details open>
+                                        <summary style="margin: 0.5rem;">
+                                            <b>Work in Data Science Lab (DSL),</b> an on-premise, cloud-based environment integrating enterprise and open-source technologies.
+                                        </summary>
+                                        <p>
+                                            <div class="panel1">
+                                                <ul>
+                                                    <li><b>Environment Orchestration: </b>Operate within a secure platform that uses Kubernetes, Docker, and Apache Airflow for orchestration.</li>
+                                                    <li><b>Data Management: </b>Manage and process vehicle data using Amazon S3, Apache Spark, Apache Iceberg, and PostgreSQL.</li>
+                                                    <li><b>Security: </b>Implement security and access control using Keycloak for SSO and OAuth-based authentication.</li>
+                                                    <li><b>Logging: </b>Ensure observability through Kibana, Grafana, and Power BI dashboards and reporting.</li>
+                                                    <li><b>DevOps: </b>Utilize an on-premise GitHub environment for source control, CI/CD pipelines, and collaborative development.</li>
+                                                </ul>
+                                            </div>
+                                        </p>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary style="margin: 0.5rem;">
+                                            <b>Built Apache Airflow ETL pipelines for Hydrogen Engine Rigs & Test Fleet Data</b> sourced from S3 data lake and distributed network locations.
+                                        </summary>
+                                        <p>
+                                            <div class="panel1">
+                                                <ul>
+                                                    <li><b>Pipeline Engineering: </b>Engineered high-frequency Apache Airflow pipelines (Runs every 5 mins) to process Hydrogen Engine Rigs and Test Fleet data from the S3 data lake.</li>
+                                                    <li><b>Data Handling: </b>Ingested data from multiple proprietary logger formats (ifile, dxd, mf4) and standardized them into parquet.</li>
+                                                    <li><b>Task Parallization: </b>Designed parallel Airflow tasks operating independently with synchronization managed through a PostgreSQL table.</li>
+                                                    <li><b>Implementation: </b>Implemented transformations, calculations, and ingestion workflows into Apache Iceberg tables with robust status tracking for each stage.</li>
+                                                </ul>
+                                            </div>
+                                        </p>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary style="margin: 0.5rem;">
+                                            <b>Developed Streamlit and Plotly Dash Applications</b> hosted on Kubernetes for 200+ users.
+                                        </summary>
+                                        <p>
+                                            <div class="panel1">
+                                                <ul>
+                                                    <li><b>Powertrain Analysis (Streamlit): </b>Created a Streamlit application for Powertrain Driveline teams to analyze gearshift performance using Iceberg-backed data; integrated Keycloak OAuth for secure access.</li>
+                                                    <li><b>Hydrogen Engine Analytics (Plotly Dash):</b>Developed a Plotly Dash application for Single Cylinder Hydrogen Engine performance analysis and outlier detection with interactive visualizations.</li>
+                                                    <li><b>Future Development: </b>A similar analytics platform for multi-cylinder engine workflows is under business evaluation.</li>
+                                                    <li><b>Data Test Tool (Streamlit): </b>Supported Maxine, a Streamlit-based data testing tool ensuring quality and consistency across pipeline outputs.</li>
+                                                </ul>
+                                            </div>
+                                        </p>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary style="margin: 0.5rem;">
+                                            <b>Created a Django-based user management portal for DSL administrators.</b>
+                                        </summary>
+                                        <p>
+                                            <div class="panel1">
+                                                <ul>
+                                                    <li><b>Platform: </b>Built and deployed a full-stack portal to manage DSL user access requests and resource allocation.</li>
+                                                    <li><b>Workflow : </b>Designed a multi-step approval workflow with in-app tracking and automated Outlook notifications.</li>
+                                                    <li><b>Admin & Security: </b>Implemented role-based access with DSL User, Admin, and Superadmin levels. Integrated LDAP authentication and connected the admin interface directly to the PostgreSQL backend governing the portal.</li>
+                                                </ul>
+                                            </div>                                            
+                                        </p>
+                                    </details>
+                                </li>
                             </ul>
                         </div>
                     </div>
-
+                    
                     <!-- HCL -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
@@ -197,8 +261,50 @@
                             <img src="media/logos/hcl_logo.svg" alt="hcl" style="height:24px;margin-right:8px;margin-block-end: 1%;">
                             <h3>Lead Analyst</h3>
                             <span class="timeline-date">October 2021 – October 2023</span>
-                            <ul>
-                                <li>Worked as a consultant for Volvo for 2 years, contributing to data engineering and analytics projects.</li>
+                            <ul style="list-style-type: none; padding-left: 0em;">
+                                <li>
+                                    <details>
+                                        <summary style="margin: 0.5rem;">
+                                            Worked as a consultant for Volvo for 2 years, contributing to data engineering and analytics projects.
+                                        </summary>
+                                        <p>
+                                            <div class="panel1">
+                                                <ul>
+                                                    <li>Worked as a Volvo consultant for 2 years, supporting multiple teams and delivering Python training across functions.</li>
+                                                </ul>
+                                            </div>
+                                        </p>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary style="margin: 0.5rem;">
+                                            Supported Volvo’s MATLAB-to-Python modernization, reducing MATLAB usage by 30%.
+                                        </summary>
+                                        <p>
+                                            <div class="panel1">
+                                                <ul>
+                                                    <li>Collaborated with global teams to reduce MATLAB dependency by 30% and lower licensing costs.</li>
+                                                    <li>Converted key MATLAB solutions—such as Dolly Tire Performance Analysis, GPS-based Track Visualization—into efficient Python equivalents and Battery SOC (State of Charge) Analysis.</li>
+                                                </ul>
+                                            </div>
+                                        </p>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary style="margin: 0.5rem;">
+                                            Developed an internal asset management system for Volvo IT.
+                                        </summary>
+                                        <p>
+                                            <div class="panel1">
+                                                <ul>
+                                                    <li>Contributed to building an internal system for tracking allocation, deallocation, and utilization of Volvo IT assets.</li>
+                                                </ul>
+                                            </div>
+                                        </p>
+                                    </details>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -210,9 +316,37 @@
                             <img src="media/logos/infosys_logo.svg" alt="infosys" style="height:34px;margin-right:8px;margin-block-end: 1%;">
                             <h3>Senior System Engineer</h3>
                             <span class="timeline-date">April 2018 – October 2021</span>
-                            <ul>
-                                <li>Developed image-scanning modules for Novartis Pharma with 80% extraction accuracy.</li>
-                                <li>Built a PostgreSQL-based digital datastore and Power BI dashboards (PIL Boards).</li>
+                            <ul style="list-style-type: none; padding-left: 0em;">
+                                <li>
+                                    <details>
+                                        <summary style="margin: 0.5rem;">
+                                            Developed image-scanning modules for Novartis Pharma with 80% extraction accuracy.
+                                        </summary>
+                                        <p>
+                                            <div class="panel">
+                                                <ul>
+                                                    <li>Developed image and text scanning modules using Tesseract to extract chemical compositions, usage instructions, and warnings from diverse PDF and Word leaflets.</li>
+                                                    <li>Achieved over 80% extraction accuracy through custom logic for tables, page alignment, and mixed content patterns.</li>
+                                                </ul>
+                                            </div>
+                                        </p>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary style="margin: 0.5rem;">
+                                            Built a PostgreSQL-based digital datastore and Power BI dashboards (PIL Boards).
+                                        </summary>
+                                        <p>
+                                            <div class="panel">
+                                                <ul>
+                                                    <li>Designed a PostgreSQL-based digital repository to store extracted leaflet content.</li>
+                                                    <li>Developed Power BI dashboards enabling structured analysis of medical product information.</li>
+                                                </ul>
+                                            </div>
+                                        </p>
+                                    </details>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -221,6 +355,7 @@
             </div>
         </section>
 
+        <!-- EDUCATION -->
         <section class="margin20" aria-labelledby="education-heading">
             <div class="panel">
                 <h2 id="education-heading" style="margin-top:0;margin-bottom:16px;">Education</h2>
@@ -254,6 +389,7 @@
             </div>  
         </section>
 
+        <!-- HOBBIES & INTERESTS -->
         <section class="margin20" aria-labelledby="hobby-heading">
             <div class="panel" style="text-align:center;">
                 <h2 id="hobby-heading" style="margin-top:0;margin-bottom:16px;">Hobbies & Interests</h2>
